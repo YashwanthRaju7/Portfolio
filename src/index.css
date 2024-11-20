@@ -1,0 +1,329 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.home-section,
+.skills-section,
+.experience-section,
+.projects-section,
+.contact-section,
+.about-section {
+  padding: 90px 40px 0px 40px;
+
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0rem;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0px 40px;
+  height: 5rem;
+}
+
+.nav h1 {
+  color: rgb(255, 172, 18);
+  font-size: 2rem;
+  margin: 0px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links {
+  font-size: 1.1rem;
+  margin-left: 20px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links.active {
+  color: rgb(255, 106, 0);
+  text-shadow: 0px 0px 4px rgb(44, 44, 44);
+}
+
+.nav-links:hover {
+  color: rgb(255, 106, 0);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+  transition: text-shadow 0.2s ease-in-out;
+}
+
+.home-section {
+  text-align: center;
+  padding: 0rem 2.5rem;
+  color: #fff;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-content img {
+  height: 24rem;
+  background-color: rgb(255, 180, 50);
+  border-radius: 50%;
+}
+
+.home-intro {
+  text-align: left;
+}
+
+.home-intro h1 {
+  color: rgb(255, 172, 18);
+  margin: 1rem 0rem;
+}
+
+.home-intro p {
+  font-size: 1.1rem;
+  margin: 1rem 0rem;
+  width: 95%;
+}
+
+.name-highlight {
+  color: rgb(255, 172, 18);
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: rgb(255, 255, 255);
+  font-size: 220%;
+  padding: 5px 8px 3px 8px;
+  box-shadow: 0px 0px 5px rgba(69,86,102,255);
+  margin: 0px 5px;
+}
+
+.social-icons a:hover {
+  color: aqua;
+  transition: 0.3s ease-in-out;
+}
+
+.about-section {
+  color: #ccc;
+}
+
+.about-section li {
+  font-size: 1.1rem;
+  margin: 8px 0px;
+}
+
+.skills-section,
+.projects-section,
+.experience-section,
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 94%;
+}
+
+.skill-card,
+.experience-card,
+.project-card {
+  padding: 1rem;
+  border: 1px solid #b5b5b5;
+  text-align: center;
+  width: 46.3%;
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.11);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  backdrop-filter: blur(6px);
+}
+
+.skill-card{
+  width: 21%;
+}
+
+.skill-card img {
+  height: 5rem;
+  max-width: 15rem;
+  mix-blend-mode: darken;
+  background-color: rgba(245, 245, 245, 0);
+}
+
+.project-card img {
+  width: 99%;
+  height: 70%;
+  border-radius: 5px;
+}
+
+.project-card h3 {
+  margin: 10px 0px 5px 0px;
+}
+
+.project-card p {
+  margin: 5px 0px 10px 0px;
+}
+
+.project-card button,
+.experience-card button{
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  background-color: #33333300;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-card button:hover,
+.experience-card button:hover {
+  background-color: whitesmoke;
+  color: #333;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+
+.contact-form {
+  width: 70%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.contact-form button {
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+@media only screen and (max-width: 1024px) {
+  .home-content {
+    flex-direction: column;
+  }
+
+  .home-content img {
+    height: 20rem;
+  }
+
+  .home-intro p {
+    width: 100%;
+  }
+
+  .skill-card {
+    width: 45%;
+  }
+
+  .experience-card, 
+  .project-card {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    font-size: 1rem;
+  }
+
+  .home-content img {
+    height: 18rem;
+  }
+
+  .skill-card {
+    width: 90%;
+  }
+
+  .experience-card, 
+  .project-card {
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .nav h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .home-content img {
+    height: 15rem;
+  }
+
+  .home-intro h1 {
+    font-size: 1.5rem;
+  }
+
+  .skill-card {
+    width: 100%;
+  }
+
+  .social-icons a {
+    font-size: 180%;
+  }
+
+  .experience-card, 
+  .project-card {
+    width: 100%;
+  }
+
+  .contact-form input, 
+  .contact-form textarea {
+    padding: 0.8rem;
+  }
+}
